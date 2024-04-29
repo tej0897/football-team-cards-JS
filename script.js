@@ -1,37 +1,17 @@
-function palindromeCheck() {
+const teamName = document.getElementById("team");
+const typeOfSport = document.getElementById("sport");
+const worldCupYear = document.getElementById("year");
+const headCoach = document.getElementById("head-coach");
+const playerCards = document.getElementById("player-cards");
+const playersDropdownList = document.getElementById("players");
+const myFavoriteFootballTeam = {
+  team: "Argentina",
+  sport: "Football",
+  year: 1986,
+  isWorldCupWinner: true,
+  headCoach: {
+    coachName: "Carlos Bilardo",
+    matches: 7,
+  },
 
-    const a = document.getElementById("text-input").value;
-    const input = a.replace(/[^A-Za-z0-9]/g, '').toLowerCase(); 
-  
-    var div = document.getElementById("result"); 
-  
-    if(input == ""){
-      alert("Please input a value");
-    } else {
-      if(isPalindrome(input)){
-        div.innerHTML = `${a} is a palindrome`;  
-      } 
-      else {
-        div.innerHTML = `${a} is not a palindrome`;
-      }
-    }
-  }
-  
-  //palindrome Check logic
-  
-  function isPalindrome(input){
-  let low = 0;
-  let high = input.length - 1;
-  while (low < high) {
-              if (input.charAt(low) != input.charAt(high)) {
-                  return false; // not a palindrome.
-              }
-              low++; // move the low index forward
-              high--; // move the high index backwards
-          }
-          return true; // is a palindrome
-  }
-  
-  
-  
-  document.addEventListener("click", palindromeCheck);  
+};
